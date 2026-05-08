@@ -1,0 +1,480 @@
+# CivicTrack — Updated PRD with Citizen Role
+
+# 📌 Product Name
+
+**CivicTrack**
+
+## 🏷️ Tagline
+
+**Smart Municipal Workforce Tracking, Citizen Reporting & Transparency System**
+
+---
+
+# 1. Updated Product Vision
+
+CivicTrack is now a complete smart-city ecosystem connecting:
+
+* 👷 Municipal Workers
+* 🧑‍💼 Government Administrators
+* 🏙️ Citizens
+
+The platform enables:
+
+* GPS-based workforce monitoring
+* Real-time municipal task management
+* Citizen issue reporting
+* Public transparency
+* Analytics-driven city operations
+
+---
+
+# 2. Updated User Roles
+
+| Role       | Description                        |
+| ---------- | ---------------------------------- |
+| Worker     | Municipal field worker             |
+| Supervisor | Area monitoring officer            |
+| Admin      | Full system administrator          |
+| Citizen    | Public user reporting civic issues |
+
+---
+
+# 3. New Citizen Module Overview
+
+## 🎯 Objective
+
+Allow citizens to directly report civic problems using:
+
+* GPS
+* Photos
+* Categories
+* Live status tracking
+
+This creates:
+
+* Faster issue resolution
+* Increased transparency
+* Better citizen engagement
+* Smart city participation
+
+---
+
+# 4. Citizen Features
+
+# MODULE 13 — Citizen Reporting System
+
+---
+
+## 📱 Citizen App Features
+
+### 🔐 Authentication
+
+Citizens can:
+
+* Register
+* Login
+* Verify phone/email
+
+---
+
+## 📸 Report Civic Issues
+
+Citizens can report:
+
+* Garbage overflow
+* Water leakage
+* Broken roads
+* Drain blockage
+* Streetlight failure
+* Illegal dumping
+* Public toilet issues
+* Dead animal pickup
+* Traffic signal damage
+
+---
+
+## 📍 Smart Complaint Submission
+
+Citizen submits:
+
+* 📸 Photo
+* 📍 GPS location
+* 📝 Description
+* 🏷️ Category
+* 🚨 Severity level
+
+---
+
+## 📦 Complaint Data Structure
+
+```json id="7nh3ll"
+{
+  "complaintId": "C102",
+  "citizenId": "U500",
+  "category": "Garbage Overflow",
+  "description": "Garbage not collected for 3 days",
+  "latitude": 19.0760,
+  "longitude": 72.8777,
+  "imageUrl": "firebase_storage_url",
+  "status": "Pending",
+  "severity": "High",
+  "timestamp": "2026-05-08T11:30:00"
+}
+```
+
+---
+
+# 5. Citizen Dashboard
+
+## Features
+
+### 🗺️ Nearby Complaints Map
+
+Show:
+
+* Nearby issues
+* Status indicators
+* Heatmap zones
+
+---
+
+### 📋 Complaint History
+
+Citizens can:
+
+* View submitted complaints
+* Track status
+* Receive updates
+
+---
+
+### 🔔 Notifications
+
+Notify citizens when:
+
+* Complaint assigned
+* Work started
+* Complaint resolved
+
+---
+
+### ⭐ Feedback & Ratings
+
+Citizens can:
+
+* Rate completed work
+* Submit satisfaction score
+* Add comments
+
+---
+
+# 6. Complaint Workflow
+
+## 📲 End-to-End Flow
+
+### Step 1
+
+Citizen reports issue
+
+↓
+
+### Step 2
+
+GPS + image uploaded
+
+↓
+
+### Step 3
+
+Admin receives complaint
+
+↓
+
+### Step 4
+
+Task assigned to worker
+
+↓
+
+### Step 5
+
+Worker completes work
+
+↓
+
+### Step 6
+
+Citizen notified
+
+↓
+
+### Step 7
+
+Citizen rates resolution
+
+---
+
+# 7. New Admin Features
+
+## Complaint Management Panel
+
+Admins can:
+
+* View all complaints
+* Filter by area/category
+* Assign workers
+* Monitor SLA time
+* Escalate severe issues
+
+---
+
+# 8. AI Smart Features for Citizen Module
+
+---
+
+## 🤖 Duplicate Complaint Detection
+
+Detect:
+
+* Same issue reported multiple times nearby
+
+Use:
+
+* GPS clustering
+* Similar image matching
+
+---
+
+## 🚨 Priority Detection
+
+AI auto-prioritizes:
+
+* Water leaks
+* Dangerous roads
+* Overflowing garbage
+
+Based on:
+
+* Severity
+* Location
+* Number of complaints
+
+---
+
+## 🧠 Smart Categorization
+
+AI automatically detects issue type from uploaded image.
+
+Example:
+
+* Garbage
+* Pothole
+* Water leak
+
+Use:
+
+* TensorFlow Lite
+* ML Kit
+
+---
+
+# 9. Public Transparency Features
+
+## 🌍 Public Civic Map
+
+Citizens can view:
+
+* Reported issues
+* Resolved issues
+* Active municipal work
+
+---
+
+## 📊 Public Statistics
+
+Show:
+
+* Complaints resolved today
+* Average response time
+* Most active zones
+* Cleanliness score
+
+---
+
+# 10. Citizen Gamification System
+
+## 🏆 Reward System
+
+Citizens earn:
+
+* Points
+* Badges
+* Rankings
+
+For:
+
+* Valid reports
+* Community participation
+
+---
+
+# 11. New Database Collections
+
+## complaints
+
+Stores:
+
+* Complaint details
+* Images
+* GPS
+* Status
+
+---
+
+## citizen_feedback
+
+Stores:
+
+* Ratings
+* Comments
+* Satisfaction score
+
+---
+
+## complaint_assignments
+
+Stores:
+
+* Worker assignments
+* Resolution data
+
+---
+
+# 12. Updated App Navigation
+
+# Citizen App Tabs
+
+| Tab           | Function         |
+| ------------- | ---------------- |
+| Home          | Dashboard        |
+| Report Issue  | Complaint upload |
+| Map           | Nearby issues    |
+| My Complaints | Track reports    |
+| Notifications | Updates          |
+| Profile       | User settings    |
+
+---
+
+# 13. Updated Dashboard Analytics
+
+Admins can now analyze:
+
+* Most reported zones
+* Complaint trends
+* Average resolution time
+* Citizen satisfaction score
+* Worker efficiency
+
+---
+
+# 14. Updated Notifications System
+
+## Citizen Notifications
+
+Send alerts when:
+
+* Complaint accepted
+* Worker assigned
+* Work in progress
+* Issue resolved
+
+---
+
+# 15. Updated Security Requirements
+
+## Citizen Privacy
+
+Protect:
+
+* User identity
+* Exact location
+* Personal information
+
+Use:
+
+* Firebase security rules
+* Encrypted communication
+
+---
+
+# 16. Updated Firestore Collections
+
+```plaintext id="c7t9sj"
+users
+attendance
+tasks
+complaints
+complaint_assignments
+citizen_feedback
+analytics
+alerts
+routes
+notifications
+```
+
+---
+
+# 17. Updated SDG Impact
+
+| SDG    | Contribution               |
+| ------ | -------------------------- |
+| SDG 11 | Smart & Sustainable Cities |
+| SDG 6  | Clean Water & Sanitation   |
+| SDG 12 | Responsible Consumption    |
+| SDG 13 | Climate Action             |
+| SDG 16 | Transparent Governance     |
+
+---
+
+# 18. Updated Demo Flow
+
+## 🎤 Final Demo
+
+### Worker Side
+
+* GPS attendance
+* Task completion
+
+### Citizen Side
+
+* Report issue
+* Upload image
+* Track complaint
+
+### Admin Side
+
+* Live dashboard
+* Assign workers
+* Monitor analytics
+
+---
+
+# 19. Updated Final Product Explanation
+
+> “CivicTrack is a smart civic management ecosystem that combines GPS-based workforce tracking, citizen issue reporting, and real-time analytics to improve transparency, accountability, and municipal service delivery.”
+
+---
+
+# 20. Updated Unique Selling Points (USP)
+
+## What Makes CivicTrack Special?
+
+✅ GPS Attendance Verification
+✅ Citizen Complaint Reporting
+✅ Real-Time Worker Tracking
+✅ AI Smart Categorization
+✅ Heatmap Analytics
+✅ Offline Functionality
+✅ Public Transparency Dashboard
+✅ Smart City Ready Infrastructure
+✅ Hackathon-Level Innovation
