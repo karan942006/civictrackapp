@@ -1,0 +1,666 @@
+# BUILD A COMPLETE PRODUCTION-READY ANDROID APPLICATION
+
+You are a senior Android engineer, Firebase architect, backend developer, UI/UX designer, DevOps engineer, and system architect.
+
+Your task is to generate a COMPLETE FULLY WORKING Android Studio project named:
+
+# CivicTrack
+
+Tagline:
+“Smart Municipal Workforce Tracking & Transparency System”
+
+The application must be modern, premium, scalable, secure, and hackathon-winning quality.
+
+The app MUST be fully runnable in Android Studio without missing dependencies or placeholder code.
+
+Generate EVERYTHING:
+
+* Full project structure
+* All Kotlin files
+* XML layouts
+* Firebase setup
+* Gradle configuration
+* Backend logic
+* Maps integration
+* Authentication
+* Room DB
+* MVVM architecture
+* Offline sync
+* Push notifications
+* Admin dashboard
+* Analytics
+* Charts
+* Geofencing
+* Fake GPS detection
+* API integrations
+* Firestore rules
+* Clean architecture
+* Material 3 premium UI
+* Dark/light theme support
+* Complete comments
+* README setup guide
+* AndroidManifest permissions
+* Navigation setup
+* Dependency injection
+* Error handling
+* State management
+* Production-grade code
+
+The generated project must compile successfully in latest Android Studio.
+
+---
+
+# APP OVERVIEW
+
+CivicTrack is a smart municipal workforce management system.
+
+The app tracks:
+
+* Worker attendance using GPS
+* Real-time worker location
+* Municipal work completion
+* Photo proof uploads
+* Task analytics
+* Route tracking
+* Heatmaps
+* Alerts
+* Reports
+
+Two roles:
+
+1. Worker
+2. Admin
+
+---
+
+# TECH STACK (MANDATORY)
+
+## Android
+
+* Kotlin
+* XML UI
+* Material Design 3
+* MVVM Architecture
+* Clean Architecture
+
+## Firebase
+
+* Firebase Authentication
+* Firestore
+* Firebase Storage
+* Firebase Cloud Messaging
+* Firebase Analytics
+
+## Maps & GPS
+
+* Google Maps SDK
+* FusedLocationProviderClient
+* Geofencing API
+* Directions API
+
+## Local Database
+
+* Room Database
+
+## Libraries
+
+Use:
+
+* Hilt
+* Retrofit
+* Glide
+* Coroutines
+* LiveData
+* Navigation Component
+* WorkManager
+* MPAndroidChart
+* Timber Logging
+
+---
+
+# DESIGN REQUIREMENTS
+
+Create a PREMIUM WHITE THEME UI.
+
+Design inspiration:
+
+* Uber
+* Notion
+* Linear
+* Google Material 3
+
+Use:
+
+* Rounded corners
+* Smooth animations
+* Modern cards
+* Elegant typography
+* Soft shadows
+* Clean spacing
+* Responsive layouts
+* Gradient buttons
+* Professional icons
+
+Add:
+
+* Splash animations
+* Loading skeletons
+* Shimmer effects
+* Motion transitions
+
+The UI must look startup-level premium.
+
+---
+
+# APP MODULES
+
+# MODULE 1 — AUTHENTICATION
+
+Build:
+
+* Splash screen
+* Login screen
+* Signup screen
+* Forgot password
+* Session persistence
+
+Support:
+
+* Email/password login
+* Phone authentication
+* Role-based authentication
+
+Roles:
+
+* Worker
+* Admin
+
+Use Firebase Authentication.
+
+Store user data in Firestore.
+
+Create secure login flow.
+
+---
+
+# MODULE 2 — GPS ATTENDANCE SYSTEM
+
+Worker can mark attendance ONLY if:
+
+* GPS matches assigned location
+* User is inside allowed geofence radius
+
+Features:
+
+* Real-time GPS verification
+* Geofence validation
+* Timestamp storage
+* Latitude/Longitude storage
+* Attendance history
+* Auto attendance sync
+* Prevent duplicate attendance
+
+Store:
+
+* Worker ID
+* GPS coordinates
+* Timestamp
+* Attendance status
+
+Implement:
+
+* Accurate GPS fetching
+* Runtime permissions
+* GPS state detection
+* Location retry handling
+
+---
+
+# FAKE GPS DETECTION (IMPORTANT)
+
+Implement:
+
+* Detect mock location apps
+* Detect emulator
+* Detect rooted devices
+* Detect suspicious movement speed
+* Block attendance if fake GPS detected
+
+Use:
+
+* location.isFromMockProvider
+* Developer settings detection
+* Emulator detection checks
+
+Show security warning dialogs.
+
+---
+
+# MODULE 3 — MUNICIPAL TASK MANAGEMENT
+
+Workers receive assigned tasks.
+
+Task types:
+
+* Waste collection
+* Road cleaning
+* Water maintenance
+* Drain cleaning
+* Road repair
+
+Features:
+
+* Task list screen
+* Task detail screen
+* Start task
+* Complete task
+* Upload proof photo
+* Add notes
+* GPS tagging
+
+Status:
+
+* Pending
+* In Progress
+* Completed
+
+---
+
+# PHOTO VERIFICATION SYSTEM
+
+Workers must upload proof images.
+
+Requirements:
+
+* Open camera directly
+* Disable gallery upload
+* Compress image
+* Upload to Firebase Storage
+* Store GPS metadata
+* Store timestamp metadata
+
+Add:
+
+* Watermark on image:
+
+  * Date
+  * Time
+  * GPS coordinates
+
+---
+
+# MODULE 4 — REAL-TIME WORKER TRACKING
+
+Admin dashboard must show:
+
+* Live worker locations
+* Online/offline workers
+* Active tasks
+* Attendance map
+
+Use:
+
+* Google Maps markers
+* Realtime Firestore updates
+
+Add:
+
+* Worker marker clustering
+* Smooth map animations
+* Live refresh
+
+---
+
+# MODULE 5 — ADMIN DASHBOARD
+
+Create a premium admin panel.
+
+Dashboard features:
+
+* Total workers
+* Present workers
+* Absent workers
+* Tasks completed
+* Active routes
+* Heatmap visualization
+* Performance analytics
+
+Add:
+
+* Charts
+* Pie charts
+* Bar charts
+* Weekly reports
+* Monthly reports
+
+Use MPAndroidChart.
+
+---
+
+# MODULE 6 — ANALYTICS ENGINE
+
+Build analytics for:
+
+* Worker performance
+* Attendance trends
+* Task completion rate
+* Area coverage
+* Efficiency score
+
+Generate:
+
+* Daily reports
+* Weekly reports
+* Monthly reports
+
+Include:
+
+* Export to PDF
+* Download reports
+
+---
+
+# MODULE 7 — ALERT SYSTEM
+
+Create smart alerts.
+
+Alerts:
+
+* Worker absent
+* Worker late
+* Worker outside geofence
+* Task overdue
+* Fake GPS detected
+
+Send:
+
+* Push notifications
+* Admin alerts
+
+Use Firebase Cloud Messaging.
+
+---
+
+# MODULE 8 — OFFLINE MODE
+
+App must work offline.
+
+Requirements:
+
+* Save attendance locally
+* Save tasks locally
+* Queue uploads
+* Sync automatically later
+
+Use:
+
+* Room Database
+* WorkManager
+
+Implement:
+
+* Conflict resolution
+* Retry mechanism
+
+---
+
+# MODULE 9 — ROUTE OPTIMIZATION
+
+Add basic route optimization.
+
+Features:
+
+* Suggested shortest path
+* Route visualization
+* Multiple stop handling
+
+Use:
+
+* Google Directions API
+
+---
+
+# MODULE 10 — HEATMAPS
+
+Generate map heatmaps showing:
+
+* Areas cleaned
+* Worker activity
+* Garbage collection coverage
+
+Use Google Maps Heatmap Utility.
+
+---
+
+# MODULE 11 — SETTINGS & PROFILE
+
+Features:
+
+* Edit profile
+* Change password
+* Notification settings
+* Language settings
+* Logout
+
+---
+
+# DATABASE STRUCTURE
+
+Generate complete Firestore collections:
+
+Collections:
+
+* users
+* attendance
+* tasks
+* task_updates
+* analytics
+* alerts
+* routes
+
+Create all models and repositories.
+
+---
+
+# FIREBASE SECURITY RULES
+
+Generate secure Firestore rules:
+
+* Worker accesses own data only
+* Admin accesses all data
+* Prevent unauthorized writes
+
+---
+
+# PROJECT STRUCTURE
+
+Generate COMPLETE Android Studio structure:
+
+com.civictrack
+│
+├── data
+├── di
+├── ui
+├── viewmodel
+├── repository
+├── network
+├── utils
+├── models
+├── services
+├── database
+├── firebase
+├── workers
+└── adapters
+
+---
+
+# NAVIGATION
+
+Use Navigation Component.
+
+Generate:
+
+* Navigation graph
+* Bottom navigation
+* Role-based navigation
+
+---
+
+# ANDROID MANIFEST
+
+Generate all required permissions:
+
+* Internet
+* Camera
+* Fine location
+* Background location
+* Notifications
+* Foreground service
+
+---
+
+# MAPS SETUP
+
+Configure:
+
+* Google Maps API key integration
+* Marker updates
+* Geofencing
+* Realtime location updates
+
+---
+
+# PERFORMANCE OPTIMIZATION
+
+Optimize:
+
+* RecyclerViews
+* Image loading
+* Firebase reads
+* Battery usage
+* Background services
+
+Use:
+
+* Pagination
+* Lazy loading
+* Caching
+
+---
+
+# SECURITY REQUIREMENTS
+
+Implement:
+
+* Secure token handling
+* Encrypted SharedPreferences
+* Secure APIs
+* Firebase App Check
+
+---
+
+# UI REQUIREMENTS
+
+Generate ALL XML layouts.
+
+Screens:
+
+* Splash
+* Login
+* Signup
+* Dashboard
+* Attendance
+* Maps
+* Task list
+* Task detail
+* Reports
+* Analytics
+* Settings
+* Profile
+
+Use:
+
+* ConstraintLayout
+* RecyclerView
+* MotionLayout animations
+
+---
+
+# GENERATE SAMPLE DATA
+
+Create:
+
+* Dummy workers
+* Sample tasks
+* Demo analytics
+
+So the app works instantly after setup.
+
+---
+
+# README FILE
+
+Generate complete README with:
+
+* Installation
+* Firebase setup
+* API key setup
+* Build instructions
+* Dependencies
+* Screenshots placeholders
+
+---
+
+# IMPORTANT REQUIREMENTS
+
+DO NOT:
+
+* Leave TODO comments
+* Leave placeholder logic
+* Leave incomplete methods
+* Skip implementation details
+
+Generate COMPLETE WORKING CODE.
+
+The project must:
+
+* Build successfully
+* Run successfully
+* Work in Android Studio latest version
+
+---
+
+# FINAL OUTPUT FORMAT
+
+Generate in this exact order:
+
+1. Project architecture
+2. Folder structure
+3. Gradle files
+4. Dependencies
+5. Firebase setup
+6. AndroidManifest
+7. Models
+8. Database
+9. Repository layer
+10. ViewModels
+11. Activities
+12. Fragments
+13. XML layouts
+14. Navigation
+15. Services
+16. Maps integration
+17. Attendance logic
+18. Fake GPS detection
+19. Offline sync
+20. Notifications
+21. Analytics
+22. Admin dashboard
+23. Firestore rules
+24. README setup guide
+
+Generate every file completely with proper imports.
+
+Build the project as if it is being shipped to production.
+
+END.
