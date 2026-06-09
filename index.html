@@ -915,6 +915,143 @@ footer::before {
   .download-cards { flex-direction: column; align-items: center; }
   .dl-card { width: 100%; max-width: 320px; }
 }
+
+/* ===== TEAM SECTION ===== */
+#team { background: var(--bg-dark); }
+.team-section-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+.team-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.8rem;
+  transition: all 0.35s ease;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+.team-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, transparent, var(--cyan), transparent);
+  opacity: 0;
+  transition: opacity 0.35s;
+}
+.team-card:hover::before { opacity: 1; }
+.team-card:hover {
+  border-color: var(--cyan);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4), 0 0 30px var(--cyan-dim);
+}
+.team-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.team-avatar {
+  width: 52px; height: 52px;
+  border-radius: 12px;
+  background: var(--cyan-dim);
+  border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-head);
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--cyan);
+  flex-shrink: 0;
+  letter-spacing: -1px;
+}
+.team-info { flex: 1; min-width: 0; }
+.team-card-name {
+  font-family: var(--font-head);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--white);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.team-card-title {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--cyan);
+  letter-spacing: 0.5px;
+  margin-top: 0.15rem;
+}
+.team-card-resp {
+  font-size: 0.82rem;
+  color: var(--grey);
+  line-height: 1.6;
+  border-top: 1px solid rgba(0,212,255,0.1);
+  padding-top: 0.8rem;
+}
+.team-card-resp strong {
+  color: var(--white);
+  font-size: 0.72rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 0.35rem;
+}
+.team-linkedin {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--grey);
+  text-decoration: none;
+  padding: 0.4rem 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: rgba(0,212,255,0.04);
+  transition: all 0.3s;
+  align-self: flex-start;
+  margin-top: auto;
+}
+.team-linkedin svg { width: 14px; height: 14px; flex-shrink: 0; }
+.team-linkedin:hover {
+  color: var(--cyan);
+  border-color: var(--cyan);
+  background: var(--cyan-dim);
+}
+
+/* footer team grid (existing styles preserved) */
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  max-width: 900px;
+}
+.team-member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  text-decoration: none;
+  padding: 0.6rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: rgba(0,212,255,0.04);
+  transition: all 0.3s;
+  min-width: 120px;
+}
+.team-member:hover { border-color: var(--cyan); background: var(--cyan-dim); }
+.li-icon { width: 18px; height: 18px; color: var(--cyan); }
+.team-name { font-size: 0.8rem; font-weight: 600; color: var(--white); text-align: center; }
+.team-role { font-size: 0.7rem; color: var(--grey); text-align: center; }
+
+@media (max-width: 768px) {
+  .team-section-grid { grid-template-columns: 1fr; }
+}
 </style>
 </head>
 <body>
@@ -929,6 +1066,7 @@ footer::before {
     <li><a href="#roles">Roles</a></li>
     <li><a href="#download">Download</a></li>
     <li><a href="#sdg">SDG</a></li>
+    <li><a href="#team">Team</a></li>
   </ul>
   <a href="#about" class="nav-cta">Get Started</a>
   <div class="hamburger" id="hamburger">
@@ -946,6 +1084,7 @@ footer::before {
   <a href="#download" onclick="closeMobile()">Download</a>
   <a href="#sdg" onclick="closeMobile()">SDG</a>
   <a href="#impact" onclick="closeMobile()">Impact</a>
+  <a href="#team" onclick="closeMobile()">Team</a>
 </div>
 
 <!-- HERO -->
@@ -1287,6 +1426,193 @@ footer::before {
   </div>
 </section>
 
+<!-- TEAM -->
+<section id="team">
+  <div class="container">
+    <p class="section-label">Meet the Team</p>
+    <h2 class="section-title">The People Behind CivicTrack</h2>
+    <p class="section-sub">A multidisciplinary team of developers, designers, and engineers committed to transforming municipal governance.</p>
+    <div class="team-section-grid">
+
+      <!-- Ishwari Shinde -->
+      <div class="team-card">
+        <div class="team-card-header">
+          <div class="team-avatar">IS</div>
+          <div class="team-info">
+            <div class="team-card-name">Ishwari Shinde</div>
+            <div class="team-card-title">Project Manager</div>
+          </div>
+        </div>
+        <div class="team-card-resp">
+          <strong>Responsibilities</strong>
+          Project planning, task allocation, progress tracking, coordination, final project delivery.
+        </div>
+        <a href="https://www.linkedin.com/in/ishwari-shinde-26a154378/" target="_blank" class="team-linkedin">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+          Connect on LinkedIn
+        </a>
+      </div>
+
+      <!-- Siddhi Salvi -->
+      <div class="team-card">
+        <div class="team-card-header">
+          <div class="team-avatar">SS</div>
+          <div class="team-info">
+            <div class="team-card-name">Siddhi Salvi</div>
+            <div class="team-card-title">Database Engineer</div>
+          </div>
+        </div>
+        <div class="team-card-resp">
+          <strong>Responsibilities</strong>
+          Firestore structure, data models, optimization, security rules.
+        </div>
+        <a href="https://www.linkedin.com/in/siddhi-salvi-288a59375/" target="_blank" class="team-linkedin">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+          Connect on LinkedIn
+        </a>
+      </div>
+
+      <!-- Bhoomi Puri -->
+      <div class="team-card">
+        <div class="team-card-header">
+          <div class="team-avatar">BP</div>
+          <div class="team-info">
+            <div class="team-card-name">Bhoomi Puri</div>
+            <div class="team-card-title">UI/UX Designer</div>
+          </div>
+        </div>
+        <div class="team-card-resp">
+          <strong>Responsibilities</strong>
+          Design app screens, wireframes, user flow, color schemes, user experience.
+        </div>
+        <a href="https://www.linkedin.com/in/bhoomi-puri-87502b374/" target="_blank" class="team-linkedin">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+          Connect on LinkedIn
+        </a>
+      </div>
+
+      <!-- Shaila Mandkulkar -->
+      <div class="team-card">
+        <div class="team-card-header">
+          <div class="team-avatar">SM</div>
+          <div class="team-info">
+            <div class="team-card-name">Shaila Mandkulkar</div>
+            <div class="team-card-title">Backend Developer</div>
+          </div>
+        </div>
+        <div class="team-card-resp">
+          <strong>Responsibilities</strong>
+          APIs, Firebase integration, database management, authentication.
+        </div>
+        <a href="https://www.linkedin.com/in/shaila-mandkulkar-228659411/" target="_blank" class="team-linkedin">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+          Connect on LinkedIn
+        </a>
+      </div>
+
+
+
+      <!-- Ketan Nimbare -->
+      <div class="team-card">
+        <div class="team-card-header">
+          <div class="team-avatar">KN</div>
+          <div class="team-info">
+            <div class="team-card-name">Ketan Nimbare</div>
+            <div class="team-card-title">GPS & Maps Integration Developer</div>
+          </div>
+        </div>
+        <div class="team-card-resp">
+          <strong>Responsibilities</strong>
+          Geolocation, geofencing, Google Maps, worker tracking features.
+        </div>
+        <a href="https://www.linkedin.com/in/ketan-nimbare-2006n18/" target="_blank" class="team-linkedin">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+          Connect on LinkedIn
+        </a>
+      </div>
+
+
+
+      <!-- Parikshit Kumbhar -->
+      <div class="team-card">
+        <div class="team-card-header">
+          <div class="team-avatar">PK</div>
+          <div class="team-info">
+            <div class="team-card-name">Parikshit Kumbhar</div>
+            <div class="team-card-title">DevOps & Deployment Engineer</div>
+          </div>
+        </div>
+        <div class="team-card-resp">
+          <strong>Responsibilities</strong>
+          APK generation, GitHub management, deployment, version control, release management.
+        </div>
+        <a href="https://www.linkedin.com/in/parikshit-kumbhar-615330339/" target="_blank" class="team-linkedin">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+          Connect on LinkedIn
+        </a>
+      </div>
+
+      <!-- Parth Kelaskar -->
+      <div class="team-card">
+        <div class="team-card-header">
+          <div class="team-avatar">PK</div>
+          <div class="team-info">
+            <div class="team-card-name">Parth Kelaskar</div>
+            <div class="team-card-title">QA & Testing Engineer</div>
+          </div>
+        </div>
+        <div class="team-card-resp">
+          <strong>Responsibilities</strong>
+          Bug testing, performance testing, user acceptance testing, quality assurance reports.
+        </div>
+        <a href="https://www.linkedin.com/in/parth-kelaskar-408735313/" target="_blank" class="team-linkedin">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+          Connect on LinkedIn
+        </a>
+      </div>
+
+      <!-- Tapan Narvekar -->
+      <div class="team-card">
+        <div class="team-card-header">
+          <div class="team-avatar">TN</div>
+          <div class="team-info">
+            <div class="team-card-name">Tapan Narvekar</div>
+            <div class="team-card-title">Documentation & Research Lead</div>
+          </div>
+        </div>
+        <div class="team-card-resp">
+          <strong>Responsibilities</strong>
+          Project documentation, SDG research, reports, PPT, user manuals.
+        </div>
+        <a href="https://www.linkedin.com/in/tapan-narvekar-030b4b406/" target="_blank" class="team-linkedin">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+          Connect on LinkedIn
+        </a>
+      </div>
+
+      <!-- Karan Lingayat -->
+      <div class="team-card">
+        <div class="team-card-header">
+          <div class="team-avatar">KL</div>
+          <div class="team-info">
+            <div class="team-card-name">Karan Lingayat</div>
+            <div class="team-card-title">Frontend Developer (Mobile App)</div>
+          </div>
+        </div>
+        <div class="team-card-resp">
+          <strong>Responsibilities</strong>
+          Build Android app screens, UI implementation, navigation, user interactions, app integration.
+        </div>
+        <a href="https://www.linkedin.com/in/karan-lingayat-066420330/" target="_blank" class="team-linkedin">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+          Connect on LinkedIn
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- FOOTER -->
 <footer>
   <div class="footer-main">
@@ -1326,12 +1652,12 @@ footer::before {
       <a href="https://www.linkedin.com/in/ishwari-shinde-26a154378/" target="_blank" class="team-member">
         <svg class="li-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
         <span class="team-name">Ishwari Shinde</span>
-        <span class="team-role">UI/UX Designer</span>
+        <span class="team-role">Project Manager</span>
       </a>
       <a href="https://www.linkedin.com/in/shaila-mandkulkar-228659411/" target="_blank" class="team-member">
         <svg class="li-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
         <span class="team-name">Shaila Mandkulkar</span>
-        <span class="team-role">UI/UX Designer</span>
+        <span class="team-role">Backend Developer</span>
       </a>
       <a href="https://www.linkedin.com/in/bhoomi-puri-87502b374/" target="_blank" class="team-member">
         <svg class="li-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
@@ -1341,32 +1667,35 @@ footer::before {
       <a href="https://www.linkedin.com/in/siddhi-salvi-288a59375/" target="_blank" class="team-member">
         <svg class="li-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
         <span class="team-name">Siddhi Salvi</span>
-        <span class="team-role">UI/UX Designer</span>
+        <span class="team-role">Database Engineer</span>
       </a>
+      
+      <div style="flex-basis:100%; height:0;"></div>
+
       <a href="https://www.linkedin.com/in/ketan-nimbare-2006n18/" target="_blank" class="team-member">
         <svg class="li-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
         <span class="team-name">Ketan Nimbare</span>
-        <span class="team-role">UI/UX Designer</span>
+        <span class="team-role">GPS & Maps Developer</span>
       </a>
       <a href="https://www.linkedin.com/in/tapan-narvekar-030b4b406/" target="_blank" class="team-member">
         <svg class="li-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
         <span class="team-name">Tapan Narvekar</span>
-        <span class="team-role">UI/UX Designer</span>
+        <span class="team-role">Documentation Lead</span>
       </a>
        <a href="https://www.linkedin.com/in/parth-kelaskar-408735313/" target="_blank" class="team-member">
         <svg class="li-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
         <span class="team-name">Parth Kelaskar</span>
-        <span class="team-role">UI/UX Designer</span>
+        <span class="team-role">QA & Testing Engineer</span>
       </a>
       <a href="https://www.linkedin.com/in/parikshit-kumbhar-615330339/" target="_blank" class="team-member">
         <svg class="li-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
         <span class="team-name">Parikshit Kumbhar</span>
-        <span class="team-role">UI/UX Designer</span>
+        <span class="team-role">DevOps Engineer</span>
       </a>
       <a href="https://www.linkedin.com/in/karan-lingayat-066420330/" target="_blank" class="team-member">
         <svg class="li-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
         <span class="team-name">Karan Lingayat</span>
-        <span class="team-role">UI/UX Designer</span>
+        <span class="team-role">Frontend Developer</span>
       </a>
     </div>
   </div>
