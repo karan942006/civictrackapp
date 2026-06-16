@@ -7,23 +7,23 @@
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root {
-  --bg-deep: #0A141F;
-  --bg-dark: #0C1D2C;
-  --bg-card: #0F2538;
-  --bg-card2: #0E2233;
+  --bg-deep: #FFFFFF;
+  --bg-dark: #F3F8F8;
+  --bg-card: #FFFFFF;
+  --bg-card2: #F0F6F6;
   --royal: #1E3A8A;
-  --teal: #14B8A6;
-  --teal-dim: rgba(20,184,166,0.15);
-  --teal-glow: rgba(20,184,166,0.42);
-  --violet: #8B7CF6;
-  --violet-dim: rgba(139,124,246,0.15);
-  --red: #FF4D6D;
-  --red-dim: rgba(255,77,109,0.15);
-  --gold: #FFD166;
-  --gold-dim: rgba(255,209,102,0.15);
-  --white: #EFF7F4;
-  --grey: #8FA7BC;
-  --border: rgba(20,184,166,0.18);
+  --teal: #0D9488;
+  --teal-dim: rgba(13,148,136,0.08);
+  --teal-glow: rgba(13,148,136,0.30);
+  --violet: #6D5BD0;
+  --violet-dim: rgba(109,91,208,0.10);
+  --red: #E11D48;
+  --red-dim: rgba(225,29,72,0.08);
+  --gold: #C2740A;
+  --gold-dim: rgba(194,116,10,0.10);
+  --white: #142433;
+  --grey: #5C7286;
+  --border: rgba(13,148,136,0.22);
   --font-head: 'Syne', sans-serif;
   --font-body: 'DM Sans', sans-serif;
 }
@@ -41,7 +41,7 @@ body::before {
 
 /* ===== NAVBAR ===== */
 nav { position: fixed; top:0; left:0; right:0; z-index:1000; padding:1.2rem 4rem; display:flex; align-items:center; justify-content:space-between; transition: all 0.4s ease; }
-nav.scrolled { background: rgba(10,20,31,0.88); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); padding: 0.9rem 4rem; }
+nav.scrolled { background: rgba(255,255,255,0.86); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); padding: 0.9rem 4rem; }
 .nav-logo { font-family: var(--font-head); font-size: 1.4rem; font-weight: 800; color: var(--white); letter-spacing: -0.5px; display:flex; align-items:center; gap:0.5rem; }
 .nav-logo span { color: var(--teal); }
 .nav-links { display:flex; gap:2.5rem; list-style:none; }
@@ -52,7 +52,7 @@ nav.scrolled { background: rgba(10,20,31,0.88); backdrop-filter: blur(20px); bor
 
 .hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; }
 .hamburger span { display:block; width:24px; height:2px; background: var(--white); border-radius:2px; }
-.mobile-menu { display:none; position:fixed; inset:0; background: rgba(10,20,31,0.97); z-index:999; flex-direction:column; align-items:center; justify-content:center; gap:2rem; }
+.mobile-menu { display:none; position:fixed; inset:0; background: rgba(255,255,255,0.97); z-index:999; flex-direction:column; align-items:center; justify-content:center; gap:2rem; }
 .mobile-menu.open { display:flex; }
 .mobile-menu a { font-family: var(--font-head); font-size:1.8rem; color: var(--white); text-decoration:none; font-weight:700; }
 .mobile-menu a:hover { color: var(--teal); }
@@ -61,7 +61,7 @@ nav.scrolled { background: rgba(10,20,31,0.88); backdrop-filter: blur(20px); bor
 /* ===== HERO ===== */
 #hero { min-height:100vh; display:flex; align-items:center; justify-content:center; text-align:center; position:relative; overflow:hidden; padding:6rem 2rem 4rem; }
 .hero-blobs { position:absolute; inset:0; z-index:0; overflow:hidden; }
-.blob { position:absolute; border-radius:50%; filter: blur(80px); opacity:0.32; animation: blobFloat 10s ease-in-out infinite; }
+.blob { position:absolute; border-radius:50%; filter: blur(80px); opacity:0.18; animation: blobFloat 10s ease-in-out infinite; }
 .blob1 { width:600px; height:600px; background: radial-gradient(circle, var(--teal), transparent); top:-200px; left:-150px; }
 .blob2 { width:500px; height:500px; background: radial-gradient(circle, var(--royal), transparent); top:50%; right:-200px; animation-delay:-4s; }
 .blob3 { width:400px; height:400px; background: radial-gradient(circle, var(--violet) 40%, transparent); bottom:-100px; left:40%; animation-delay:-7s; }
@@ -81,13 +81,13 @@ nav.scrolled { background: rgba(10,20,31,0.88); backdrop-filter: blur(20px); bor
 
 /* hero phone mockup */
 .hero-visual { margin-top: 3.2rem; display:flex; justify-content:center; }
-.phone-mock { width: 290px; background: var(--bg-card); border:1px solid var(--border); border-radius: 28px; padding: 1.6rem 1.5rem; position:relative; box-shadow: 0 30px 80px rgba(0,0,0,0.5), 0 0 40px var(--teal-dim); text-align:left; }
+.phone-mock { width: 290px; background: var(--bg-card); border:1px solid var(--border); border-radius: 28px; padding: 1.6rem 1.5rem; position:relative; box-shadow: 0 30px 80px rgba(15,37,56,0.14), 0 0 40px var(--teal-dim); text-align:left; }
 .phone-mock-header { font-size:0.7rem; color: var(--grey); letter-spacing:1.5px; text-transform:uppercase; margin-bottom:1.3rem; display:flex; justify-content:space-between; align-items:center; }
 .ring { width:128px; height:128px; border-radius:50%; background: conic-gradient(var(--teal) 0% 85%, rgba(255,255,255,0.07) 85% 100%); display:flex; align-items:center; justify-content:center; margin: 0 auto 1.3rem; }
 .ring-inner { width:98px; height:98px; border-radius:50%; background: var(--bg-card); display:flex; flex-direction:column; align-items:center; justify-content:center; }
 .ring-pct { font-family: var(--font-head); font-size:1.65rem; font-weight:800; color: var(--white); }
 .ring-label { font-size:0.62rem; color: var(--grey); text-transform:uppercase; letter-spacing:1px; margin-top:0.15rem; text-align:center; }
-.phone-mini-row { display:flex; align-items:center; justify-content:space-between; padding:0.5rem 0; border-bottom:1px solid rgba(255,255,255,0.05); font-size:0.78rem; color: var(--grey); }
+.phone-mini-row { display:flex; align-items:center; justify-content:space-between; padding:0.5rem 0; border-bottom:1px solid rgba(20,40,55,0.07); font-size:0.78rem; color: var(--grey); }
 .phone-mini-row:last-child { border-bottom:none; }
 .mini-badge { padding:0.15rem 0.55rem; border-radius:20px; font-size:0.66rem; font-weight:700; }
 .sos-fab { position:absolute; bottom:-16px; right:-16px; width:54px; height:54px; border-radius:50%; background: var(--red); display:flex; align-items:center; justify-content:center; font-weight:800; color:#fff; font-size:0.62rem; letter-spacing:0.5px; box-shadow: 0 0 0 0 rgba(255,77,109,0.6); animation: sosPulse 2.2s infinite; border: 3px solid var(--bg-deep); }
@@ -113,7 +113,7 @@ section { padding: 6rem 2rem; }
 .dl-card { background: var(--bg-card); border:1px solid var(--border); border-radius:18px; padding:2rem 2.2rem; width:230px; display:flex; flex-direction:column; align-items:center; gap:1rem; transition: all 0.35s ease; text-decoration:none; color: var(--white); position:relative; overflow:hidden; cursor:pointer; }
 .dl-card::before { content:''; position:absolute; inset:0; background: linear-gradient(135deg, var(--teal-dim), transparent); opacity:0; transition: opacity 0.35s; }
 .dl-card:hover::before { opacity:1; }
-.dl-card:hover { border-color: var(--teal); transform: translateY(-8px); box-shadow: 0 24px 60px rgba(0,0,0,0.4), 0 0 30px var(--teal-dim); }
+.dl-card:hover { border-color: var(--teal); transform: translateY(-8px); box-shadow: 0 24px 60px rgba(15,37,56,0.12), 0 0 30px var(--teal-dim); }
 .dl-card.upcoming { border-color: rgba(255,209,102,0.25); cursor:default; }
 .dl-card.upcoming::before { background: linear-gradient(135deg, var(--gold-dim), transparent); }
 .dl-icon { width:60px; height:60px; border-radius:16px; display:flex; align-items:center; justify-content:center; font-size:1.8rem; background: rgba(255,255,255,0.05); border:1px solid var(--border); position:relative; z-index:1; }
@@ -137,7 +137,7 @@ section { padding: 6rem 2rem; }
 .problem-card::before { content:''; position:absolute; top:0; left:0; right:0; height:2px; background: linear-gradient(90deg, transparent, var(--teal), transparent); opacity:0; transition: opacity 0.4s; }
 .problem-card:hover::before { opacity:1; }
 .problem-card.visible { opacity:1; transform: translateY(0); }
-.problem-card:hover { border-color: var(--teal); transform: translateY(-6px); box-shadow: 0 20px 60px rgba(0,0,0,0.4), 0 0 30px var(--teal-dim); }
+.problem-card:hover { border-color: var(--teal); transform: translateY(-6px); box-shadow: 0 20px 60px rgba(15,37,56,0.12), 0 0 30px var(--teal-dim); }
 .problem-icon { width:52px; height:52px; background: var(--teal-dim); border-radius:12px; display:flex; align-items:center; justify-content:center; font-size:1.4rem; margin-bottom:1.2rem; border:1px solid var(--border); }
 .problem-card h3 { font-family: var(--font-head); font-size:1.15rem; font-weight:700; margin-bottom:0.6rem; }
 .problem-card p { color: var(--grey); font-size:0.9rem; line-height:1.65; }
@@ -149,13 +149,13 @@ section { padding: 6rem 2rem; }
 .about-left .big-quote span { color: var(--teal); }
 .about-left p { color: var(--grey); margin-top:1.5rem; line-height:1.7; }
 .feature-list { list-style:none; margin-top:1rem; }
-.feature-list li { display:flex; align-items:center; gap:1rem; padding:1rem 0; border-bottom:1px solid rgba(20,184,166,0.08); font-weight:500; font-size:0.95rem; opacity:0; transform: translateX(30px); transition: all 0.5s ease; }
+.feature-list li { display:flex; align-items:center; gap:1rem; padding:1rem 0; border-bottom:1px solid rgba(13,148,136,0.10); font-weight:500; font-size:0.95rem; opacity:0; transform: translateX(30px); transition: all 0.5s ease; }
 .feature-list li.visible { opacity:1; transform: translateX(0); }
 .feature-list li:last-child { border-bottom:none; }
 .feat-icon { width:36px; height:36px; background: var(--teal-dim); border-radius:8px; display:flex; align-items:center; justify-content:center; color: var(--teal); font-size:1rem; flex-shrink:0; border:1px solid var(--border); }
 
 /* ===== METRICS ===== */
-#metrics { background: linear-gradient(135deg, var(--royal) 0%, #081024 100%); border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
+#metrics { background: linear-gradient(135deg, #EAF7F5 0%, #FFFFFF 100%); border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
 .metrics-grid { display:grid; grid-template-columns: repeat(4,1fr); gap:2rem; text-align:center; }
 .metric-item { padding:2rem 1rem; }
 .metric-number { font-family: var(--font-head); font-size: clamp(2.6rem,5vw,3.8rem); font-weight:800; color: var(--gold); line-height:1; letter-spacing:-2px; text-shadow: 0 0 30px rgba(255,209,102,0.4); }
@@ -188,9 +188,9 @@ section { padding: 6rem 2rem; }
 .role-capabilities li::before { content:'✦'; color: var(--teal); font-size:0.7rem; flex-shrink:0; }
 .role-mockup { background: var(--bg-card); border:1px solid var(--border); border-radius:16px; padding:2rem; font-size:0.85rem; }
 .role-mockup-title { font-family: var(--font-head); font-size:0.75rem; font-weight:700; color: var(--teal); letter-spacing:2px; text-transform:uppercase; margin-bottom:1.5rem; padding-bottom:0.8rem; border-bottom:1px solid var(--border); }
-.mock-row { display:flex; align-items:center; justify-content:space-between; padding:0.65rem 0; border-bottom:1px solid rgba(255,255,255,0.05); color: var(--grey); font-size:0.82rem; }
+.mock-row { display:flex; align-items:center; justify-content:space-between; padding:0.65rem 0; border-bottom:1px solid rgba(20,40,55,0.07); color: var(--grey); font-size:0.82rem; }
 .mock-badge { padding:0.2rem 0.7rem; border-radius:20px; font-size:0.72rem; font-weight:600; }
-.badge-green { background: rgba(0,255,136,0.15); color:#00ff88; }
+.badge-green { background: rgba(22,163,74,0.12); color:#15803D; }
 .badge-gold { background: var(--gold-dim); color: var(--gold); }
 .badge-teal { background: var(--teal-dim); color: var(--teal); }
 .badge-red { background: var(--red-dim); color: var(--red); }
@@ -206,7 +206,7 @@ section { padding: 6rem 2rem; }
 /* ===== ANALYTICS ===== */
 #analytics { background: var(--bg-deep); }
 .analytics-grid { display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center; margin-top:1rem; }
-.donut-mock { width:220px; height:220px; border-radius:50%; margin: 0 auto; background: conic-gradient(#00ff88 0% 62%, var(--red) 62% 78%, var(--grey) 78% 100%); display:flex; align-items:center; justify-content:center; box-shadow: 0 0 40px var(--teal-dim); }
+.donut-mock { width:220px; height:220px; border-radius:50%; margin: 0 auto; background: conic-gradient(#16A34A 0% 62%, var(--red) 62% 78%, var(--grey) 78% 100%); display:flex; align-items:center; justify-content:center; box-shadow: 0 0 40px var(--teal-dim); }
 .donut-inner { width:150px; height:150px; border-radius:50%; background: var(--bg-card); display:flex; flex-direction:column; align-items:center; justify-content:center; }
 .donut-inner .num { font-family: var(--font-head); font-size:2rem; font-weight:800; color: var(--white); }
 .donut-inner .lbl { font-size:0.7rem; color: var(--grey); text-transform:uppercase; letter-spacing:1px; }
@@ -244,7 +244,7 @@ footer::before { content:''; position:absolute; top:0; left:0; right:0; height:1
 .footer-col ul { list-style:none; display:flex; flex-direction:column; gap:0.7rem; }
 .footer-col ul a { color: var(--grey); text-decoration:none; font-size:0.88rem; transition: color 0.3s; }
 .footer-col ul a:hover { color: var(--teal); }
-.footer-bottom { border-top:1px solid rgba(255,255,255,0.06); padding:1.5rem 4rem; display:flex; align-items:center; justify-content:space-between; max-width:1200px; margin:0 auto; flex-wrap:wrap; gap:1rem; }
+.footer-bottom { border-top:1px solid rgba(20,40,55,0.08); padding:1.5rem 4rem; display:flex; align-items:center; justify-content:space-between; max-width:1200px; margin:0 auto; flex-wrap:wrap; gap:1rem; }
 .footer-tagline { font-size:0.8rem; color: var(--grey); }
 .footer-tagline span { color: var(--teal); }
 .social-links { display:flex; gap:1rem; }
@@ -283,6 +283,7 @@ footer::before { content:''; position:absolute; top:0; left:0; right:0; height:1
     <li><a href="#about">Features</a></li>
     <li><a href="#roles">Guardian Link</a></li>
     <li><a href="#tech">Tech Stack</a></li>
+    <li><a href="#test-app">Test App</a></li>
     <li><a href="#faq">FAQs</a></li>
   </ul>
   <a href="#download" class="nav-cta">Download App</a>
@@ -297,6 +298,7 @@ footer::before { content:''; position:absolute; top:0; left:0; right:0; height:1
   <a href="#workflow" onclick="closeMobile()">Workflow</a>
   <a href="#roles" onclick="closeMobile()">Guardian Link</a>
   <a href="#tech" onclick="closeMobile()">Tech Stack</a>
+  <a href="#test-app" onclick="closeMobile()">Test App</a>
   <a href="#download" onclick="closeMobile()">Download</a>
   <a href="#faq" onclick="closeMobile()">FAQs</a>
 </div>
@@ -325,7 +327,7 @@ footer::before { content:''; position:absolute; top:0; left:0; right:0; height:1
             <div class="ring-label">Compliance</div>
           </div>
         </div>
-        <div class="phone-mini-row"><span>Metformin · 8:00 AM</span><span class="mini-badge badge-green" style="background:rgba(0,255,136,0.15);color:#00ff88;">Taken</span></div>
+        <div class="phone-mini-row"><span>Metformin · 8:00 AM</span><span class="mini-badge badge-green" style="background:rgba(22,163,74,0.12);color:#15803D;">Taken</span></div>
         <div class="phone-mini-row"><span>Vitamin D3 · 1:00 PM</span><span class="mini-badge" style="background:var(--teal-dim);color:var(--teal);">Pending</span></div>
         <div class="phone-mini-row"><span>Amlodipine · stock low</span><span class="mini-badge" style="background:var(--gold-dim);color:var(--gold);">Refill</span></div>
         <div class="sos-fab">SOS</div>
@@ -343,7 +345,7 @@ footer::before { content:''; position:absolute; top:0; left:0; right:0; height:1
       <h2 class="section-title">Download MedReminder</h2>
       <p class="section-sub">Get the app on your Android device today, or wait for our upcoming Play Store launch.</p>
       <div class="download-cards">
-        <a href="#" class="dl-card" target="_blank">
+        <a href="https://github.com/karan942006/civictrackapp/raw/refs/heads/main/app-debug.apk" class="dl-card" target="_blank">
           <div class="dl-icon">⚡</div>
           <div class="dl-label">Direct Download</div>
           <div class="dl-title">Instant APK</div>
@@ -361,7 +363,27 @@ footer::before { content:''; position:absolute; top:0; left:0; right:0; height:1
           <span class="dl-btn dl-btn-gold">🔔 Notify Me</span>
         </div>
       </div>
-      <p class="dl-note">Replace the placeholder <code>href="#"</code> on the APK card with your actual release link before publishing.</p>
+      <p class="dl-note">Installing from GitHub may require enabling "Install from unknown sources" in your Android settings.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TEST THE APP -->
+<section id="test-app">
+  <div class="container">
+    <div class="download-inner">
+      <p class="section-label">Try It Now</p>
+      <h2 class="section-title">Test the App Online</h2>
+      <p class="section-sub">Preview a working build of the interface in your browser before installing the APK on a device.</p>
+      <div class="download-cards">
+        <a href="https://github.com/karan942006/civictrackapp/blob/main/working.html" class="dl-card" target="_blank">
+          <div class="dl-icon">🧪</div>
+          <div class="dl-label">Live Preview</div>
+          <div class="dl-title">Open Working Demo</div>
+          <div class="dl-desc">View the working.html build on GitHub to explore the interface before installing.</div>
+          <span class="dl-btn">🔗 Open Demo</span>
+        </a>
+      </div>
     </div>
   </div>
 </section>
@@ -569,7 +591,7 @@ footer::before { content:''; position:absolute; top:0; left:0; right:0; height:1
           </div>
         </div>
         <div class="donut-legend">
-          <div class="legend-item"><span class="legend-dot" style="background:#00ff88;"></span> Taken</div>
+          <div class="legend-item"><span class="legend-dot" style="background:#16A34A;"></span> Taken</div>
           <div class="legend-item"><span class="legend-dot" style="background:var(--red);"></span> Missed</div>
           <div class="legend-item"><span class="legend-dot" style="background:var(--grey);"></span> Skipped</div>
         </div>
@@ -651,6 +673,7 @@ footer::before { content:''; position:absolute; top:0; left:0; right:0; height:1
       <ul>
         <li><a href="#faq">FAQs</a></li>
         <li><a href="#analytics">Analytics</a></li>
+        <li><a href="#test-app">Test the App</a></li>
         <li><a href="#download">Download</a></li>
       </ul>
     </div>
