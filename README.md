@@ -285,7 +285,7 @@ CivicTrack isn't just a governance tool — it's a commitment to a **sustainable
 
 | Stakeholder | Impact |
 |---|---|
-| 🏠 **Citizens** | Faster issue resolution, transparent complaint tracking, restored faith in public service delivery |
+| 🏠 **Citizen** | Faster issue resolution, transparent complaint tracking, restored faith in public service delivery |
 | 👷 **Workers** | Fair, verifiable attendance records protect workers from wage disputes and provide digital proof of contributions |
 | 🌆 **Cities** | Cleaner streets, better infrastructure, reduced operational costs, and data-driven governance at scale |
 
@@ -316,3 +316,4 @@ Built with purpose by a dedicated team of developers and designers:
 [![Download Now](https://img.shields.io/badge/⬇%20Download%20Now-APK-00D4FF?style=for-the-badge&labelColor=0D1B2A)](https://github.com/karan942006/civictrackapp/releases/download/CivicTrack/app-debug.apk)
 
 </div>
+
